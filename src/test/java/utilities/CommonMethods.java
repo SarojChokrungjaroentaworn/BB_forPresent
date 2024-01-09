@@ -328,11 +328,12 @@ public class CommonMethods extends PageInitializer {
 
 	public static void removeItem() {
 		try {
-			click(hp.logo);
 			hardWait(1);
 			click(ip.goToCart);
+			hardWait(1);
 			click(scp.trash);
-			click(scp.deleteItem);
+			click(scp.okToDeleteItem);
+			click(hp.logo);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

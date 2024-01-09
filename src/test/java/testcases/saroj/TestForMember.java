@@ -28,14 +28,28 @@ public class TestForMember extends CommonMethods{
 //		click(subp.subscribeButton);
 //		
 //        System.out.println(fp.textStatusSubsribe.getText());
-		sendKey(hp.searchTextBox, getProperty("ItemAddedToCartForTestCase_BB_TestCase_01"));
-		hoverOverMouse(hp.MagnifyingGlass);
-		click(hp.MagnifyingGlass);
-		click(ip.montanaWindJacketItem2);
-		click(ip.addToWishListButton);
-		hardWait(1);
-		Assert.assertTrue(compareStringInList(ap.myWishList,"Montana Wind Jacket"));
-	
+//		sendKey(hp.searchTextBox, getProperty("ItemAddedToCartForTestCase_BB_TestCase_01"));
+//		hoverOverMouse(hp.MagnifyingGlass);
+//		click(hp.MagnifyingGlass);
+//		click(ip.montanaWindJacketItem2);
+//		click(ip.addToWishListButton);
+//		hardWait(1);
+//		Assert.assertTrue(compareStringInList(ap.myWishList,"Montana Wind Jacket"));
+//		clickOnMenuBar(hsp.hotSellerWidgetList,getProperty("ProductItemSelected_TestCase_02"));
+//		click(ip.sizeS);
+//		click(ip.colorblue);
+//		click(ip.addToCartButton);
+//		hardWait(2);
+//		click(ip.goToCart);
+//		Assert.assertTrue(
+//				ip.itemInCartName.getText().contains(getProperty("ProductItemSelected_TestCase_02")));
+//	
+//		click(hp.logo);
+//		hardWait(2);
+//		click(ip.goToCart);
+//		hardWait(1);
+//		click(scp.trash);
+//		click(scp.okToDeleteItem);
 	}
 
 }

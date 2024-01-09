@@ -76,8 +76,9 @@ public class BaseClass {
 	@AfterMethod(alwaysRun = true)
 	public void logOut() {
 		try {
+			if(getDriver().getCurrentUrl().equalsIgnoreCase("https://magento.softwaretestingboard.com/")) {
 			hp.headerButton.click();
-			CommonMethods.clickOnMenuBar(hp.header, getProperty("Luma_HeaderOptionSelected"));
+			CommonMethods.clickOnMenuBar(hp.header, getProperty("Luma_HeaderOptionSelected"));}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -85,12 +86,11 @@ public class BaseClass {
 	}
 
 	// driver tear down method
-	 @AfterClass(alwaysRun = true)
+	@AfterClass(alwaysRun = true)
 	public static void tearDown() {
 		if (getDriver() != null) {
 			getDriver().close();
 			getDriver().quit();
-
 		}
 
 	}

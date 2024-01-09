@@ -32,7 +32,7 @@ public class ItemPage {
 	@FindBy(xpath = "//button[@title='Add to Cart']")
 	public WebElement addToCartButton;
 
-	@FindBy(xpath = "//a[@class='action showcart']")
+	@FindBy(xpath = "//div[@class='minicart-wrapper']/a")
 	public WebElement goToCart;
 
 	@FindBy(xpath = "//a[@class='action showcart active']")
@@ -137,6 +137,15 @@ public class ItemPage {
 	
 	@FindBy(xpath = "//div[@class='minicart-items-wrapper']//strong[@class='product-item-name']/a")
 	public WebElement itemInCartName;
+	
+	@FindBy(xpath = "//*[@id=\"mini-cart\"]/li/div/div/strong/a")
+	public WebElement itemInCartName2;
+	
+	@FindBy(xpath = "//*[@id=\"minicart-content-wrapper\"]/div[2]/div[5]/div/a")
+	public WebElement editCart;
+	
+	@FindBy(xpath = "//*[@id=\"shopping-cart-table\"]/tbody/tr[1]/td[1]/a")
+	public WebElement itemName;
 	
 	
 	

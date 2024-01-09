@@ -22,6 +22,11 @@ public class ShoppingCartPage {
 	public WebElement okToDeleteItem;
 	
 	@FindBy(xpath = "//footer[@class='modal-footer']/button[2]")
+	public WebElement okToDeleteItem2;
+	
+	
+	
+	@FindBy(xpath = "//footer[@class='modal-footer']/button[2]")
 	public WebElement deleteItem;
 
 	@FindBy(xpath = "//a[@class='action viewcart']")

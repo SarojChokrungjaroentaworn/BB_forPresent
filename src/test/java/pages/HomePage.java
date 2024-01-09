@@ -17,7 +17,7 @@ public class HomePage {
 	@FindBy(xpath = "//ul[@class='header links']/li/a")
 	public List<WebElement> header;
 
-	@FindBy(xpath = "//button[@class='action switch']")
+	@FindBy(xpath = "/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button")
 	public WebElement headerButton;
 
 	@FindBy(xpath = "//input[@id='search']")

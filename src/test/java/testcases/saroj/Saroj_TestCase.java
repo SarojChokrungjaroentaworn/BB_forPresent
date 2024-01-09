@@ -11,7 +11,7 @@ import utilities.RetryAnalyzer;
 @Listeners(ListensTestNG.class)
 public class Saroj_TestCase extends CommonMethods {
 
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test
 	public void removeItemfromCart() {
 		sendKey(hp.searchTextBox, getProperty("ItemAddedToCart_TestCase_01"));
 		hoverOverMouse(hp.MagnifyingGlass);
@@ -29,21 +29,25 @@ public class Saroj_TestCase extends CommonMethods {
 		Assert.assertEquals(ip.emptyCart.getText(), getProperty("EmptyCart_TestCase_01"));
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test
 	public void addItemtoCart() {
 		clickOnMenuBar(hsp.hotSellerWidgetList, getProperty("ProductItemSelected_TestCase_02"));
 		click(ip.sizeS);
 		click(ip.colorblue);
 		click(ip.addToCartButton);
 		hardWait(2);
+//		waitForVisibility(ip.goToCart);
 		click(ip.goToCart);
-		Assert.assertEquals(ip.itemInCartName.getText(), getProperty("ProductItemSelected_TestCase_02"));
+		hardWait(1);
+		click(ip.editCart);
+		hardWait(1);
+		Assert.assertEquals(ip.itemName.getAttribute("title"), getProperty("ProductItemSelected_TestCase_02"));
 		removeItem();
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test
 	public void updateQuantityInCart() {
-		click(hp.logo);
+
 		click(hsp.radiantTee);
 		click(ip.sizeS);
 		click(ip.colorblue);
