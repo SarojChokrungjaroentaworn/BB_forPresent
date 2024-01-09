@@ -56,6 +56,9 @@ public class ShoppingCartPage {
 	
 	@FindBy(xpath = "//div[@class='details-qty qty']/input")
 	public WebElement qtyTextBox;
+	
+	@FindBy(xpath = "//td[@class='col qty']//input")
+	public WebElement qtyTextboxInShoppingcart;
 
 	
 	

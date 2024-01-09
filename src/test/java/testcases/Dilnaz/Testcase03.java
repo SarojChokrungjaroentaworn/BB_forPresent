@@ -1,5 +1,6 @@
 package testcases.Dilnaz;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import utilities.CommonMethods;
@@ -7,16 +8,16 @@ import utilities.CommonMethods;
 public class Testcase03 extends CommonMethods {
 
 	@Test
-	public void adRedirection() throws InterruptedException {
-		getDriver();
-//		click(hp.womenBotton);
-//		click(hp.topsSubMenu);
-//
-//		Thread.sleep(3000);
-//		Select s = new Select(hp.sortBy);
-//
-//		s.selectByValue("name");
-//	
+	public void sortFunction() {
 
+		// click Woman menu
+		click(hp.women);
+		// click Top menu
+		click(hp.topInWoman);
+		// click sort by price
+		click(ip.sortByPrice);
+		// compare price after we ascending sort by price
+		Assert.assertTrue(isAscendingOrder(getPriceList(ip.listItemAfterSort)));
 	}
+
 }

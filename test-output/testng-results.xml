@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-09T15:42:26 EST" name="Default suite" finished-at="2024-01-09T15:42:48 EST" duration-ms="22363">
+    <groups>
+    </groups>
+    <test started-at="2024-01-09T15:42:26 EST" name="Default test" finished-at="2024-01-09T15:42:48 EST" duration-ms="22363">
+      <class name="testcases.saroj.BB_TestCase_03">
+        <test-method is-config="true" signature="getDriver()[pri:0, instance:testcases.saroj.BB_TestCase_03@4e38d975]" started-at="2024-01-09T15:42:26 EST" name="getDriver" finished-at="2024-01-09T15:42:26 EST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method is-config="true" signature="login()[pri:0, instance:testcases.saroj.BB_TestCase_03@4e38d975]" started-at="2024-01-09T15:42:26 EST" name="login" finished-at="2024-01-09T15:42:28 EST" duration-ms="1883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="updateQuantityInCart()[pri:0, instance:testcases.saroj.BB_TestCase_03@4e38d975]" started-at="2024-01-09T15:42:28 EST" name="updateQuantityInCart" finished-at="2024-01-09T15:42:37 EST" duration-ms="9880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateQuantityInCart -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:testcases.saroj.BB_TestCase_03@4e38d975]" started-at="2024-01-09T15:42:37 EST" name="logOut" finished-at="2024-01-09T15:42:48 EST" duration-ms="10216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.saroj.BB_TestCase_03@4e38d975]" started-at="2024-01-09T15:42:48 EST" name="tearDown" finished-at="2024-01-09T15:42:48 EST" duration-ms="362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.saroj.BB_TestCase_03 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

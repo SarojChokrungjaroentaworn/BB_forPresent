@@ -26,12 +26,12 @@ public class Dilnaz_TestCase extends CommonMethods {
 	}
 
 //	@Test
-	public void myPreviousOrder() throws InterruptedException {
-		click(hp.headerButton);
-		clickOnMenuBar(hp.header, getProperty("Luma_HeaderOption1"));
-		click(ap.myOrder);
-		Assert.assertTrue(compareStringInList(ap.firstPreviousOrder, getProperty("First_Previous_Order_Date")));
-	}
+//	public void myPreviousOrder() throws InterruptedException {
+//		click(hp.headerButton);
+//		clickOnMenuBar(hp.header, getProperty("Luma_HeaderOption1"));
+//		click(ap.myOrder);
+//		Assert.assertTrue(compareStringInList(ap.firstPreviousOrder, getProperty("First_Previous_Order_Date")));
+//	}
 
 	@Test
 	public void sortFunction() {

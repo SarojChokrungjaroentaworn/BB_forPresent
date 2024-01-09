@@ -19,7 +19,8 @@ public class BB_TestCase_03 extends CommonMethods {
 		sendText(scp.QTYBoxInviewAndEditcart, getProperty("QuantityUpdated_TestCase_03"));
 		click(scp.updateShoppingCart);
 		hardWait(2);
-		Assert.assertTrue(scp.subTotal.getText().contains(getProperty("ConfirmQty_TestCase_03")));
+		Assert.assertEquals(scp.qtyTextboxInShoppingcart.getAttribute("value"),
+				getProperty("QuantityUpdated_TestCase_03"));
 		removeItem();
 	}
 
