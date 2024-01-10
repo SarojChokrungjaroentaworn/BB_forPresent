@@ -26,7 +26,6 @@ public class BB_TestCase_03 extends CommonMethods {
 //		waitForVisibility(scp.qtyTextboxInShoppingcart);
 		Assert.assertEquals(scp.qtyTextboxInShoppingcart.getAttribute("value"),
 				getProperty("QuantityUpdated_TestCase_03"));
-		removeItem();
 	}
 
 }

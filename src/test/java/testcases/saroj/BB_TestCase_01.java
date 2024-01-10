@@ -21,14 +21,12 @@ public class BB_TestCase_01 extends CommonMethods {
 		click(ip.addToCartButton);
 		softWait();
 		click(ip.goToCart);
-//		hardWait(2);
-		waitForVisibility(ip.itemInCartName);
-		Assert.assertEquals(ip.itemInCartName.getText(), getProperty("ItemAddedToCart_TestCase_01"));
-//		hardWait(2);
-		waitForVisibility(scp.trash);
-		click(scp.trash);
-		click(scp.okToDeleteItem);
-		Assert.assertTrue(compare(ip.emptyCart.getText(), getProperty("EmptyCart_TestCase_01")));
+		hardWait(2);
+		click(scp.viewAndEditCart);
+		int beforeDelete = getAmountItemFromList(scp.itemList);
+		click(scp.deleteFirstItem);
+		int afTerDelete = getAmountItemFromList(scp.itemList);
+		Assert.assertEquals(beforeDelete - 1, afTerDelete);
 
 	}
 

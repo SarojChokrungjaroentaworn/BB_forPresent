@@ -20,13 +20,15 @@ public class Saroj_TestCase extends CommonMethods {
 		click(ip.sizeS);
 		click(ip.colorblack);
 		click(ip.addToCartButton);
-		hardWait(2);
+		softWait();
 		click(ip.goToCart);
-		Assert.assertEquals(ip.itemInCartName.getText(), getProperty("ItemAddedToCart_TestCase_01"));
 		hardWait(2);
-		click(scp.trash);
-		click(scp.okToDeleteItem);
-		Assert.assertEquals(ip.emptyCart.getText(), getProperty("EmptyCart_TestCase_01"));
+		click(scp.viewAndEditCart);
+		int beforeDelete = getAmountItemFromList(scp.itemList);
+		click(scp.deleteFirstItem);
+		int afTerDelete = getAmountItemFromList(scp.itemList);
+		Assert.assertEquals(beforeDelete - 1, afTerDelete);
+
 	}
 
 	@Test
@@ -35,32 +37,32 @@ public class Saroj_TestCase extends CommonMethods {
 		click(ip.sizeS);
 		click(ip.colorblue);
 		click(ip.addToCartButton);
-		hardWait(2);
+		hardWait(1);
 //		waitForVisibility(ip.goToCart);
 		click(ip.goToCart);
 		hardWait(1);
 		click(ip.editCart);
 		hardWait(1);
-		Assert.assertEquals(ip.itemName.getAttribute("title"), getProperty("ProductItemSelected_TestCase_02"));
-		removeItem();
+		Assert.assertTrue(compareStringInListWithAttribute(ip.itemNameList,
+				getProperty("ProductItemSelected_TestCase_02"), getProperty("AttributeTitle")));
 	}
 
 	@Test
 	public void updateQuantityInCart() {
-
-		click(hsp.radiantTee);
+		clickOnMenuBar(hsp.hotSellerWidgetList, getProperty("ProductItemSelected_TestCase_02"));
 		click(ip.sizeS);
 		click(ip.colorblue);
 		click(ip.addToCartButton);
 		hardWait(2);
+//		waitForVisibility(ip.goToCart);
 		click(ip.goToCart);
 		click(scp.viewAndEditCart);
 		sendText(scp.QTYBoxInviewAndEditcart, getProperty("QuantityUpdated_TestCase_03"));
 		click(scp.updateShoppingCart);
 		hardWait(2);
+//		waitForVisibility(scp.qtyTextboxInShoppingcart);
 		Assert.assertEquals(scp.qtyTextboxInShoppingcart.getAttribute("value"),
 				getProperty("QuantityUpdated_TestCase_03"));
-		removeItem();
 	}
 
 }

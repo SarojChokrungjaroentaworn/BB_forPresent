@@ -16,14 +16,14 @@ public class BB_TestCase_02 extends CommonMethods {
 		click(ip.sizeS);
 		click(ip.colorblue);
 		click(ip.addToCartButton);
-		hardWait(2);
+		hardWait(1);
 //		waitForVisibility(ip.goToCart);
 		click(ip.goToCart);
 		hardWait(1);
 		click(ip.editCart);
 		hardWait(1);
-		Assert.assertEquals(ip.itemName.getAttribute("title"), getProperty("ProductItemSelected_TestCase_02"));
-		removeItem();
+		Assert.assertTrue(compareStringInListWithAttribute(ip.itemNameList,
+				getProperty("ProductItemSelected_TestCase_02"), getProperty("AttributeTitle")));
 	}
 
 }

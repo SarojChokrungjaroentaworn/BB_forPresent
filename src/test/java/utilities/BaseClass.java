@@ -67,18 +67,19 @@ public class BaseClass {
 
 	@BeforeMethod(alwaysRun = true)
 	public void login() {
-		CommonMethods.click(lp.signIn);
+//		CommonMethods.click(lp.signIn);
+		getDriver().get(getProperty("loginPage"));
 		CommonMethods.sendKey(lp.lumaEmail, getProperty("email"));
 		CommonMethods.sendKey(lp.lumaPassword, getProperty("password"));
 		CommonMethods.click(lp.lumaSignInButton);
+		getDriver().get(getProperty("homePage"));
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void logOut() {
 		try {
-			if(getDriver().getCurrentUrl().equalsIgnoreCase("https://magento.softwaretestingboard.com/")) {
 			hp.headerButton.click();
-			CommonMethods.clickOnMenuBar(hp.header, getProperty("Luma_HeaderOptionSelected"));}
+			CommonMethods.clickOnMenuBar(hp.header, getProperty("Luma_HeaderOptionSelected"));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

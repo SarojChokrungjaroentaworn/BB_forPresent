@@ -321,6 +321,16 @@ public class CommonMethods extends PageInitializer {
 		}
 		return output;
 	}
+	public static boolean compareStringInListWithAttribute(List<WebElement> input, String expected,String att) {
+		boolean output = false;
+		for (WebElement each : input) {
+			if (expected.contains(each.getAttribute(att))) {
+				output = true;
+				break;
+			}
+		}
+		return output;
+	}
 
 	public static int changeStringToInt(String string) {
 		return Integer.parseInt(string);

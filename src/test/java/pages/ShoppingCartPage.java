@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -64,7 +66,13 @@ public class ShoppingCartPage {
 	
 	@FindBy(xpath = "//td[@class='col qty']//input")
 	public WebElement qtyTextboxInShoppingcart;
-
+	
+	@FindBy(xpath = "//table[@id='shopping-cart-table']/tbody")
+	public List<WebElement> itemList;
+	
+	@FindBy(xpath = "//table[@id='shopping-cart-table']/tbody[1]//a[@title='Remove item']")
+	public WebElement deleteFirstItem;
+	
 	
 	
 	

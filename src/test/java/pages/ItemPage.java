@@ -147,6 +147,9 @@ public class ItemPage {
 	@FindBy(xpath = "//*[@id=\"shopping-cart-table\"]/tbody/tr[1]/td[1]/a")
 	public WebElement itemName;
 	
+	@FindBy(xpath = "//*[@id=\"shopping-cart-table\"]/tbody/tr[1]/td/a")
+	public List<WebElement> itemNameList;
+	
 	
 	
 	
